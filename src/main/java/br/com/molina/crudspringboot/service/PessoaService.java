@@ -27,7 +27,12 @@ public class PessoaService implements IpessoaService {
 
     @Override
     public int save(Pessoa p) {
-        return 0;
+        int res=0;
+        Pessoa pessoa=data.save(p);
+        if(!pessoa.equals(null)){
+            res=1;
+        }
+        return res;
     }
 
     @Override
