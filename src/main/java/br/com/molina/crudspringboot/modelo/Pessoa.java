@@ -3,7 +3,7 @@ package br.com.molina.crudspringboot.modelo;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "pessoas")
+@Table(name = "pessoa")
 public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.thymeleaf.org ">
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="ISO-8859-1">
     <title>Title</title>
@@ -23,11 +23,11 @@
         </thead>
         <tbody>
         <tr th:each="pessoa:${pessoas}">
-            <td  th:text="${pessoa.id}"></td>
-            <td> th:text="${pessoa.nome}"></td>
-            <td> th:text="${pessoa.telefone}"></td>
+            <td th:text="${pessoa.id}"></td>
+            <td th:text="${pessoa.nome}"></td>
+            <td th:text="${pessoa.telefone}"></td>
             <td>
-                <a class="btn btn-warning">Editar</a>
+                <a th:href="@{/editar/}+${pessoa.id}" class="btn btn-warning">Editar</a>
                 <a class="btn btn-danger">Deletar</a>
             </td>
         </tr>

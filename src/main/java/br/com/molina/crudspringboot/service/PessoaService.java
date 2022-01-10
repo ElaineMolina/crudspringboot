@@ -17,12 +17,12 @@ public class PessoaService implements IpessoaService {
 
     @Override
     public List<Pessoa> listar() {
-        return (List<Pessoa>)data.findAll();
+        return(List<Pessoa>) data.findAll();
     }
 
     @Override
     public Optional<Pessoa> listarId(int id) {
-        return null;
+        return data.findById(id);
     }
 
     @Override
